@@ -21,3 +21,22 @@ body.math{
   background-color: sandybrown;
   color: #fff
 }
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: auto;
+  padding: 16px;
+}
+
+nav ul li {
+  background-color: burlywood;
+  padding: 8px 16px;
+  transition: all .3;
+}
+nav ul li:hover {
+  background-color: #333;
+  color: burlywood;
+}
