@@ -15,4 +15,6 @@ app.use("/math", mathRouter);
 app.use("/history", historyRouter);
 app.use("/science", scienceRouter);
 
+app.set("view engine", "ejs");
+
 app.listen(port, console.log(`It's port ${port}`));
