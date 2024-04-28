@@ -27,5 +27,7 @@ app.use("/math", mathRouter);
 app.use("/history", historyRouter);
 app.use("/science", scienceRouter);
 
+app.use(express.static("public"));
+
 
 app.listen(port, console.log(`It's port ${port}`));

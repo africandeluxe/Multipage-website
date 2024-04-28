@@ -7,7 +7,8 @@ res.render(
   "pages/subject",
   {
     pageTitle: "Science",
-    subTitle: "Learn High School Science"
+    subTitle: "Learn High School Science",
+    className: "science"
   }
 )
 );

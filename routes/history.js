@@ -7,7 +7,8 @@ historyRouter.get('/', (req, res) => res.render
   "pages/subject",
   {
     pageTitle: "History",
-    subTitle: "Learn High School Science"
+    subTitle: "Learn High School Science",
+    className: "history"
   }
 )
 );
