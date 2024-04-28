@@ -1,0 +1,17 @@
+{
+  "name": "learnhub",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "npm - Multipage Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Miski M. Manzizila",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "*",
+    "express": "*"
+  }
+}
