@@ -1,8 +1,6 @@
 import express from "express";
 
 const mathRouter = express.Router();
-const algebraRouter = express.Router();
-const geometryRouter = express.Router();
 
 mathRouter.get('/', (req, res) => 
 res.render(
@@ -15,7 +13,7 @@ res.render(
 )
 );
 
-algebraRouter.get('/algebra', (req, res) => 
+mathRouter.get('/algebra', (req, res) => 
   res.render('pages/subpage', 
   {
     pageTitle: 'Algebra',
@@ -24,7 +22,7 @@ algebraRouter.get('/algebra', (req, res) =>
   })
 );
 
-geometryRouter.get('/geometry', (req, res) => 
+mathRouter.get('/geometry', (req, res) => 
   res.render('pages/subpage', 
   {
     pageTitle: 'Geometry',

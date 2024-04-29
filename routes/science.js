@@ -1,9 +1,6 @@
 import express from "express";
 
 const scienceRouter = express.Router();
-const physicsRouter = express.Router();
-const biologyRouter = express.Router();
-
 
 scienceRouter.get('/', (req, res) => 
 res.render(
@@ -16,7 +13,7 @@ res.render(
 )
 );
 
-physicsRouter.get('/physics', (req, res) => 
+scienceRouter.get('/physics', (req, res) => 
   res.render('pages/subpage', 
   {
     pageTitle: 'Physics',
@@ -25,7 +22,7 @@ physicsRouter.get('/physics', (req, res) =>
   })
 );
 
-biologyRouter.get('/biology', (req, res) => 
+scienceRouter.get('/biology', (req, res) => 
   res.render('pages/subpage', 
   {
     pageTitle: 'Biology',

@@ -1,9 +1,6 @@
 import express from "express";
 
 const historyRouter = express.Router();
-const ancientRouter = express.Router();
-const modernRouter = express();
-
 
 historyRouter.get('/', (req, res) => res.render
 (
@@ -16,8 +13,9 @@ historyRouter.get('/', (req, res) => res.render
 )
 );
 
-ancientRouter.get('/ancient', (req, res) => 
-res.render('pages/subpage', 
+historyRouter.get('/ancient', (req, res) => res.render
+(
+  'pages/subpage', 
 {
   pageTitle: 'Ancient History',
   subTitle: 'Ancient History explores the early civilizations like Egypt, Mesopotamia, and the Indus Valley.',
@@ -25,7 +23,7 @@ res.render('pages/subpage',
 })
 );
 
-modernRouter.get('/modern', (req, res) => 
+historyRouter.get('/modern', (req, res) => 
 res.render('pages/subpage', 
 {
   pageTitle: 'Modern History',
