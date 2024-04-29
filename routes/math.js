@@ -1,6 +1,6 @@
 import express from "express";
 
-const mathRouter = express.Router;
+const mathRouter = express.Router();
 
 mathRouter.get('/', (req, res) => 
 res.render(

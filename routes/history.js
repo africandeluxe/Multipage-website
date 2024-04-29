@@ -1,6 +1,6 @@
 import express from "express";
 
-const historyRouter = express.Router;
+const historyRouter = express.Router();
 
 historyRouter.get('/', (req, res) => res.render
 (
