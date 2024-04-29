@@ -1,5 +1,4 @@
 import express from "express";
-import { mathTopics } from "../data/topics.js";
 
 const mathRouter = express.Router;
 
@@ -10,7 +9,6 @@ res.render(
     pageTitle: "Math",
     subTitle: "Learn High school Math",
     className: "math",
-    topics: "mathTopics"
   }
 )
 );
