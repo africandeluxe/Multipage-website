@@ -1,35 +1,29 @@
 import express from "express";
+import { historyData } from '../data/history.js';
 
 const historyRouter = express.Router();
 
-historyRouter.get('/', (req, res) => res.render
-(
-  "pages/subject",
-  {
-    pageTitle: "History",
-    subTitle: "Learn High School Science",
-    className: "history"
+historyRouter.get('/', (req, res) => {
+  res.render('pages/subject', {
+    pageTitle: historyData.pageTitle,
+    subTitle: historyData.subTitle,
+    className: historyData.className,
+    topics: historyData.topics,
+    baseUrl: 'history'
+  });
+});
+
+historyRouter.get('/:topic', (req, res) => {
+  const topic = historyData.topics.find(t => t.slug === req.params.topic);
+  if (topic) {
+    res.render('pages/subpage', {
+      pageTitle: topic.pageTitle,
+      subTitle: topic.subTitle,
+      className: topic.className
+    });
+  } else {
+    res.status(404).send('Topic not found');
   }
-)
-);
-
-historyRouter.get('/ancient', (req, res) => res.render
-(
-  'pages/subpage', 
-{
-  pageTitle: 'Ancient History',
-  subTitle: 'Ancient History explores the early civilizations like Egypt, Mesopotamia, and the Indus Valley.',
-  className: 'History'
-})
-);
-
-historyRouter.get('/modern', (req, res) => 
-res.render('pages/subpage', 
-{
-  pageTitle: 'Modern History',
-  subTitle: 'Modern History covers events from the late 15th century onwards, including the Renaissance, Industrial Revolution, World Wars, and the Information Age.',
-  className: 'History'
-})
-);
+});
 
 export default historyRouter;

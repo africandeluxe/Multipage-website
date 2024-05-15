@@ -1,34 +1,29 @@
 import express from "express";
+import { mathData } from '../data/math.js';
 
 const mathRouter = express.Router();
 
-mathRouter.get('/', (req, res) => 
-res.render(
-  "pages/subject",
-  {
-    pageTitle: "Math",
-    subTitle: "Learn High school Math",
-    className: "math",
+mathRouter.get('/', (req, res) => {
+  res.render('pages/subject', {
+    pageTitle: mathData.pageTitle,
+    subTitle: mathData.subTitle,
+    className: mathData.className,
+    topics: mathData.topics,
+    baseUrl: 'math'
+  });
+});
+
+mathRouter.get('/:topic', (req, res) => {
+  const topic = mathData.topics.find(t => t.slug === req.params.topic);
+  if (topic) {
+    res.render('pages/subpage', {
+      pageTitle: topic.pageTitle,
+      subTitle: topic.subTitle,
+      className: topic.className
+    });
+  } else {
+    res.status(404).send('Topic not found');
   }
-)
-);
-
-mathRouter.get('/algebra', (req, res) => 
-  res.render('pages/subpage', 
-  {
-    pageTitle: 'Algebra',
-    subTitle: 'Algebra is a branch of mathematics dealing with symbols and the rules for manipulating these symbols.',
-    className: 'Math'
-  })
-);
-
-mathRouter.get('/geometry', (req, res) => 
-  res.render('pages/subpage', 
-  {
-    pageTitle: 'Geometry',
-    subTitle: 'Geometry involves the study of shapes, sizes, relative positions of figures, and properties of space.',
-    className: 'Math'
-  })
-);
+});
 
 export default mathRouter;
