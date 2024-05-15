@@ -70,3 +70,31 @@ footer a:hover {
 footer p {
   margin: 5px 0;
 }
+
+.topics {
+  margin: 20px auto; 
+  padding: 20px; 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 800px;
+}
+
+.topics p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.topics p:last-child {
+  border-bottom: none;
+  margin-bottom: 0; 
+  padding-bottom: 0;
+}
+
+.topics span {
+  font-weight: bold; 
+  color: #0077cc;
+  margin-right: 5px;
+}
