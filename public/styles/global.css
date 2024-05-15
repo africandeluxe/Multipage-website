@@ -98,3 +98,43 @@ footer p {
   color: #0077cc;
   margin-right: 5px;
 }
+
+@media (max-width: 768px) {
+  .content-wrapper, .topics {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  nav ul li {
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .topics p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
