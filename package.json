@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "*",
-    "nodemon": "*"
-  }
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  },
+  "keywords": []
 }

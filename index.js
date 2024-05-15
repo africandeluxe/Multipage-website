@@ -6,7 +6,7 @@ import * as path from "path";
 
 
 const app = express();
-const port = process.env.PORT || 3002;
+const port = process.env.PORT || 3000;
 const __dirname = path.resolve();
 
 app.set("view engine", "ejs");
